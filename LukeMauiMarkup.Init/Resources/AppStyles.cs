@@ -1,6 +1,6 @@
 using Microsoft.Maui.Controls.Shapes;
 
-namespace CommunityToolkitMarkup.HotReloadSample
+namespace LukeMauiMarkup.Init
 {
     public class AppStyles : ResourceDictionary
     {

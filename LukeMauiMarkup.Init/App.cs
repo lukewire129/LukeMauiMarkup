@@ -1,4 +1,6 @@
-﻿namespace CommunityToolkitMarkup.HotReloadSample
+﻿using LukeMauiMarkup.Init.Views;
+
+namespace LukeMauiMarkup.Init
 {
     public partial class App : Application
     {
@@ -52,7 +54,7 @@
         protected override Window CreateWindow(IActivationState? activationState)
         {
             var window = base.CreateWindow (activationState);
-            window.Title = "CommunityToolkitMarkup.HotReloadSample";
+            window.Title = "LukeMauiMarkup.Init";
             return window;
         }
     }

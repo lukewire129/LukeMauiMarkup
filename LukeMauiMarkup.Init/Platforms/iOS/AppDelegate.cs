@@ -1,6 +1,6 @@
 ﻿using Foundation;
 
-namespace CommunityToolkitMarkup.HotReloadSample
+namespace LukeMauiMarkup.Init
 {
     [Register (nameof (AppDelegate))]
     public class AppDelegate : MauiUIApplicationDelegate

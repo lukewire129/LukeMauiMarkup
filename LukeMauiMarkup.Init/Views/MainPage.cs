@@ -1,6 +1,6 @@
-﻿using LukeMauiMarkup;
+﻿using LukeMauiMarkup.Init.ViewModels;
 
-namespace CommunityToolkitMarkup.HotReloadSample.Views
+namespace LukeMauiMarkup.Init.Views
 {
     public partial class MainPage : LukeContentPage
     {

@@ -1,4 +1,4 @@
-﻿namespace CommunityToolkitMarkup.HotReloadSample.ViewModels
+﻿namespace LukeMauiMarkup.Init.ViewModels
 {
     public partial class MainViewModel(ISemanticScreenReader screenReader) : ObservableObject
     {

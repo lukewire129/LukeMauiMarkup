@@ -1,6 +1,7 @@
-﻿using Microsoft.Extensions.Logging;
-using LukeMauiMarkup;
-namespace CommunityToolkitMarkup.HotReloadSample;
+﻿using LukeMauiMarkup.Init.ViewModels;
+using LukeMauiMarkup.Init.Views;
+using Microsoft.Extensions.Logging;
+namespace LukeMauiMarkup.Init;
 
 public static partial class MauiProgram
 {

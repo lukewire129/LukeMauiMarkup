@@ -16,13 +16,13 @@
         <Nullable>enable</Nullable>
         <LangVersion>latest</LangVersion>
         <ImplicitUsings>enable</ImplicitUsings>
-        <RootNamespace>CommunityToolkitMarkup.HotReloadSample</RootNamespace>
+        <RootNamespace>LukeMauiMarkup.Init</RootNamespace>
 
         <!-- Display name -->
-        <ApplicationTitle>CommunityToolkitMarkup.HotReloadSample</ApplicationTitle>
+        <ApplicationTitle>LukeMauiMarkup.Init</ApplicationTitle>
 
         <!-- App Identifier -->
-        <ApplicationId>com.companyname.CommunityToolkitMarkup.HotReloadSample</ApplicationId>
+        <ApplicationId>com.companyname.LukeMauiMarkup.Init</ApplicationId>
         <ApplicationIdGuid>17d7a747-f44e-4ced-ab1e-9c89563a6845</ApplicationIdGuid>
 
         <!-- Versions -->
@@ -58,7 +58,6 @@
         <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="8.*" Condition="'$(Configuration)' == 'Debug'" />
         <PackageReference Include="Microsoft.Maui.Controls" Version="$(MauiVersion)" />
         <PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="$(MauiVersion)" />
-        <PackageReference Include="CommunityToolkit.Mvvm" Version="8.*" />
     </ItemGroup>
 
     <ItemGroup>

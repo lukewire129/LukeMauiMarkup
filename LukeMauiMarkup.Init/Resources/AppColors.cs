@@ -1,6 +1,6 @@
 ﻿using Microsoft.Maui.Graphics;
 
-namespace CommunityToolkitMarkup.HotReloadSample
+namespace LukeMauiMarkup.Init
 {
     public class AppColors : ResourceDictionary
     {

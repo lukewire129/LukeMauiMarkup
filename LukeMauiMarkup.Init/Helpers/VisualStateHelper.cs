@@ -1,4 +1,4 @@
-﻿namespace CommunityToolkitMarkup.HotReloadSample.Helpers
+﻿namespace LukeMauiMarkup.Init.Helpers
 {
     public static class VisualStateHelper
     {

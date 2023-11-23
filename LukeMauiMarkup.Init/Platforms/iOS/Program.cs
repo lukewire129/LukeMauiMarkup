@@ -1,7 +1,7 @@
 ﻿using ObjCRuntime;
 using UIKit;
 
-namespace CommunityToolkitMarkup.HotReloadSample
+namespace LukeMauiMarkup.Init
 {
     public class Program
     {

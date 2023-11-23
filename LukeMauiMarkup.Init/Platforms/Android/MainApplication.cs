@@ -1,7 +1,7 @@
 ﻿using Android.App;
 using Android.Runtime;
 
-namespace CommunityToolkitMarkup.HotReloadSample
+namespace LukeMauiMarkup.Init
 {
     [Application]
     public class MainApplication : MauiApplication
