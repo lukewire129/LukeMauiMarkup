@@ -25,12 +25,29 @@ public class HotReloadHandler : ICommunityToolkitHotReloadHandler
             {
                 if (type.IsSubclassOf (typeof (Page)))
                 {
+                    if (TryGetModalStackPage (window, out var modalPage))
+                    {
+                        await currentPage.Dispatcher.DispatchAsync (async () =>
+                        {
+                            await currentPage.Navigation.PopModalAsync (false);
+                            await currentPage.Navigation.PushModalAsync (modalPage, false);
+                        });
+
+                        return;
+                    }
+
                     await currentPage.Dispatcher.DispatchAsync (async () =>
                     {
-                        ((LukeContentPage)currentPage).Build ();
+                        var navi = (NavigationPage)currentPage;
+                        ((LukeContentPage)navi.CurrentPage).Build ();
                     });
                 }
             }
         }
+    }
+    bool TryGetModalStackPage(Window window, [NotNullWhen (true)] out Page? page)
+    {
+        page = window.Navigation.ModalStack.LastOrDefault ();
+        return page is not null;
     }
 }

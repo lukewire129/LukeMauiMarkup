@@ -7,6 +7,7 @@ namespace LukeMauiMarkup.Init.Views
         public MainPage(MainViewModel viewModel)
         {
             BindingContext = viewModel;
+            this.Build ();
         }
 
         public override void Build()
@@ -24,12 +25,21 @@ namespace LukeMauiMarkup.Init.Views
                             Spacing = 25,
                             Children =
                             {
+                                new Button()
+                                  .Width(100)
+                                  .Height(70)
+                                  .Text("Navigation")
+                                  .TapGesture(()=>
+                                  {
+                                      Navigation.PushAsync(new ChildrenPage());
+                                  })
 
+                                  
                             }
                         }
                         .Padding (30)
                         .Row(0)
-                        .BackgroundColor(Colors.Red),
+                        .BackgroundColor(Colors.Blue),
 
                         new StackLayout ()
                         {

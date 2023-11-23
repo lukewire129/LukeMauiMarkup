@@ -8,10 +8,8 @@
 
         [RelayCommand]
         private void Increment()
-        {
-            _count++;
-            CountText = $"Current count: {_count}";
-            screenReader.Announce (CountText);
+        { 
+            
         }
     }
 }

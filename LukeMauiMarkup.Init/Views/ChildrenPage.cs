@@ -1,6 +1,6 @@
 ﻿namespace LukeMauiMarkup.Init.Views
 {
-    internal class ChildrenPage : LukeContentPage
+    public class ChildrenPage : LukeContentPage
     {
         public override void Build()
         {
