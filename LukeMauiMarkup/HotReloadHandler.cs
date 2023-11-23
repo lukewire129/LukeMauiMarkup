@@ -35,12 +35,17 @@ public class HotReloadHandler : ICommunityToolkitHotReloadHandler
 
                         return;
                     }
-
-                    await currentPage.Dispatcher.DispatchAsync (async () =>
+                    else if (currentPage is NavigationPage naviPage)
                     {
-                        var navi = (NavigationPage)currentPage;
-                        ((LukeContentPage)navi.CurrentPage).Build ();
-                    });
+                        await currentPage.Dispatcher.DispatchAsync (async () =>
+                        {
+                            ((LukeContentPage)naviPage.CurrentPage).Build ();
+                        });
+                    }
+                    else if (currentPage is ContentPage contentPage)
+                    {
+                        ((LukeContentPage)contentPage).Build ();
+                    }
                 }
             }
         }
