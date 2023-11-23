@@ -1,5 +1,6 @@
 ﻿using CommunityToolkit.Maui.Markup;
 using System.Diagnostics;
+using System.Diagnostics.CodeAnalysis;
 
 namespace LukeMauiMarkup;
 
@@ -24,10 +25,10 @@ public class HotReloadHandler : ICommunityToolkitHotReloadHandler
             {
                 if (type.IsSubclassOf (typeof (Page)))
                 {
-                    if (window.Page is LukeContentPage page)
+                    await currentPage.Dispatcher.DispatchAsync (async () =>
                     {
-                        page.Reload ();
-                    }
+                        ((LukeContentPage)currentPage).Build ();
+                    });
                 }
             }
         }

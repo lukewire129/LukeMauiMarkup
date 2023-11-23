@@ -1,14 +1,7 @@
-﻿using LukeMauiMarkup.Init.ViewModels;
-
-namespace LukeMauiMarkup.Init.Views
+﻿namespace LukeMauiMarkup.Init.Views
 {
-    public partial class MainPage : LukeContentPage
+    internal class ChildrenPage : LukeContentPage
     {
-        public MainPage(MainViewModel viewModel)
-        {
-            BindingContext = viewModel;
-        }
-
         public override void Build()
         {
             Content = new ScrollView ()

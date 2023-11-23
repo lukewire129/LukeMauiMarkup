@@ -2,12 +2,9 @@
 {
     public abstract class LukeContentPage : ContentPage
     {
-        public void Reload()
+        public LukeContentPage()
         {
-            MainThread.BeginInvokeOnMainThread (() =>
-            {
-                Build ();
-            });
+            this.Build ();
         }
         public abstract void Build();
     }

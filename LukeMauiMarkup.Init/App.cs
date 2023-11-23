@@ -1,4 +1,5 @@
-﻿using LukeMauiMarkup.Init.Views;
+﻿using LukeMauiMarkup.Init.ViewModels;
+using LukeMauiMarkup.Init.Views;
 
 namespace LukeMauiMarkup.Init
 {
@@ -48,7 +49,7 @@ namespace LukeMauiMarkup.Init
                 },
             });
 
-            MainPage = services.GetService<MainPage> ();
+            MainPage = new NavigationPage (new MainPage(services.GetService<MainViewModel> ()));
         }
 
         protected override Window CreateWindow(IActivationState? activationState)

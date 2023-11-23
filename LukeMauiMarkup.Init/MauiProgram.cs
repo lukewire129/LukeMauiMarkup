@@ -1,5 +1,4 @@
 ﻿using LukeMauiMarkup.Init.ViewModels;
-using LukeMauiMarkup.Init.Views;
 using Microsoft.Extensions.Logging;
 namespace LukeMauiMarkup.Init;
 
@@ -18,7 +17,6 @@ public static partial class MauiProgram
 
         builder.Services.AddSingleton (SemanticScreenReader.Default);
         builder.Services.AddSingleton<MainViewModel> ();
-        builder.Services.AddSingleton<MainPage> ();
 
 #if DEBUG
         builder.Logging.AddDebug();
