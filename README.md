@@ -5,7 +5,7 @@
 - 사용방법
   1. Install
 
-       ![image](https://github.com/lukewire129/LukeMauiMarkup/assets/54387261/6c6b18a2-1c38-42d2-924c-abca217c39ca)
+     ![image](https://github.com/lukewire129/LukeMauiMarkup/assets/54387261/6c6b18a2-1c38-42d2-924c-abca217c39ca)
 
   2. Service Add
 
@@ -13,7 +13,7 @@
 
   3. App에서 NavaigationPage 생성
 
-    ![image](https://github.com/lukewire129/LukeMauiMarkup/assets/54387261/c3f7eb18-ddfd-4677-82b3-edae88df36f7)
+     ![image](https://github.com/lukewire129/LukeMauiMarkup/assets/54387261/c3f7eb18-ddfd-4677-82b3-edae88df36f7)
 
   4. MainPage 상속 변경
      
