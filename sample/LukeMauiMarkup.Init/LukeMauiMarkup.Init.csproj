@@ -61,6 +61,7 @@
     </ItemGroup>
 
     <ItemGroup>
+      <ProjectReference Include="..\..\src\LukeMauiMarkup\LukeMauiMarkup.csproj" />
       <ProjectReference Include="..\LukeMauiMarkup\LukeMauiMarkup.csproj" />
     </ItemGroup>
 </Project>
