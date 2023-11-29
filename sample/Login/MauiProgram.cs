@@ -12,8 +12,15 @@ namespace Login
                 .UseLukeMauiMarkup ()
                 .ConfigureFonts (fonts =>
                 {
-                    fonts.AddFont ("OpenSans-Regular.ttf", "OpenSansRegular");
-                    fonts.AddFont ("OpenSans-Semibold.ttf", "OpenSansSemibold");
+                    fonts.AddFont ("NotoSansKR-Black.ttf", "NotoSansKRBlack");
+                    fonts.AddFont ("NotoSansKR-Bold.ttf", "NotoSansKRBold");
+                    fonts.AddFont ("NotoSansKR-ExtraBold.ttf", "NotoSansKRExtraBold");
+                    fonts.AddFont ("NotoSansKR-ExtraLight.ttf", "NotoSansKRExtraLight");
+                    fonts.AddFont ("NotoSansKR-Light.ttf", "NotoSansKRLight");
+                    fonts.AddFont ("NotoSansKR-Medium.ttf", "NotoSansKRMedium");
+                    fonts.AddFont ("NotoSansKR-Regular.ttf", "NotoSansKRRegular");
+                    fonts.AddFont ("NotoSansKR-SemiBold.ttf", "NotoSansKRSemiBold");
+                    fonts.AddFont ("NotoSansKR-Thin.ttf", "NotoSansKRThin");
                 });
 
 #if DEBUG

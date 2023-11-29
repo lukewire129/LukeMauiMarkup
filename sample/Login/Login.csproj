@@ -57,6 +57,18 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <None Remove="Resources\Fonts\NotoSansKR-Black.ttf" />
+	  <None Remove="Resources\Fonts\NotoSansKR-Bold.ttf" />
+	  <None Remove="Resources\Fonts\NotoSansKR-ExtraBold.ttf" />
+	  <None Remove="Resources\Fonts\NotoSansKR-ExtraLight.ttf" />
+	  <None Remove="Resources\Fonts\NotoSansKR-Light.ttf" />
+	  <None Remove="Resources\Fonts\NotoSansKR-Medium.ttf" />
+	  <None Remove="Resources\Fonts\NotoSansKR-Regular.ttf" />
+	  <None Remove="Resources\Fonts\NotoSansKR-SemiBold.ttf" />
+	  <None Remove="Resources\Fonts\NotoSansKR-Thin.ttf" />
+	</ItemGroup>
+
+	<ItemGroup>
 		<PackageReference Include="LukeMauiMarkup" Version="1.0.0.3" />
 		<PackageReference Include="Microsoft.Maui.Controls" Version="$(MauiVersion)" />
 		<PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="$(MauiVersion)" />

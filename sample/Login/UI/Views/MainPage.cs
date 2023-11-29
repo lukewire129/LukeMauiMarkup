@@ -11,7 +11,7 @@ public class MainPage : LukeContentPage
     {
         Content = new Grid
         {
-            RowDefinitions = Rows.Define(Auto, 114, Auto, 25, Auto),
+            RowDefinitions = Rows.Define (Auto, 114, Auto, 25, Auto),
             Children =
             {
                 new Grid
@@ -22,12 +22,12 @@ public class MainPage : LukeContentPage
                     {
                         new TitleLabel()
                             .Text("아파트 실거래가는", this.ColorHex ("9da2e8"))
-                            .Font(size: 30)
+                            .Font(size: 30, family:"NotoSansKRLight")
                             .Row(0),
 
                         new TitleLabel()
-                            .Font(size: 65, bold: true)
                             .Text("호갱노노", this.ColorHex("5d66da"))
+                            .Font(size: 63, bold: true, family:"NotoSansKRBold")
                             .Row(1)
                     }
                 }
@@ -50,7 +50,7 @@ public class MainPage : LukeContentPage
                         {
                             BorderWidth = 1.2
                         }
-                        .BackgroundColor(Colors.Transparent)                        
+                        .BackgroundColor(Colors.Transparent)
                         .Text("다른 방법으로 시작하기", this.ColorHex("4c4c4c"))
                         .Font(size:18, bold: true)
                     }
@@ -64,9 +64,7 @@ public class MainPage : LukeContentPage
                     .Row(4)
             }
         }
-        .CenterHorizontal ()
-        .BackgroundColor(Colors.White)
-        .Margins(top:140D);
+        .BackgroundColor (Colors.White);
     }
 }
 
