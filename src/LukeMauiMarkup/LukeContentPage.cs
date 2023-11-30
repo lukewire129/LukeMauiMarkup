@@ -1,6 +1,6 @@
 ﻿namespace LukeMauiMarkup
 {
-    public abstract class LukeContentPage : ContentPage
+    public abstract class LukeContentPage : ContentPage, ILukePage
     {
         public LukeContentPage()
         {

@@ -16,7 +16,7 @@
 		<TargetPlatformMinVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'">10.0.17763.0</TargetPlatformMinVersion>
 		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'tizen'">6.5</SupportedOSPlatformVersion>
 
-    <Version>1.0.0.5</Version>
+    <Version>1.0.0.6</Version>
     <Authors>lukewire</Authors>
     <Product>lukewire</Product>
     <Copyright>lukewire</Copyright>
@@ -30,6 +30,7 @@
 	<ItemGroup>
 	  <PackageReference Include="CommunityToolkit.Maui.Markup" Version="4.0.0" />
 	  <PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.2" />
+	  <PackageReference Include="Plugin.Maui.Popup" Version="1.0.5" />
 	</ItemGroup>
 
 </Project>

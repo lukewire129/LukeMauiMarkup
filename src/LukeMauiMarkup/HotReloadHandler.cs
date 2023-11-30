@@ -27,24 +27,26 @@ public class HotReloadHandler : ICommunityToolkitHotReloadHandler
                 {
                     if (TryGetModalStackPage (window, out var modalPage))
                     {
-                        await currentPage.Dispatcher.DispatchAsync (async () =>
+                        await currentPage.Dispatcher.DispatchAsync (() =>
                         {
-                            await currentPage.Navigation.PopModalAsync (false);
-                            await currentPage.Navigation.PushModalAsync (modalPage, false);
+                            ((ILukePage)modalPage).Build ();
                         });
 
                         return;
                     }
                     else if (currentPage is NavigationPage naviPage)
                     {
-                        await currentPage.Dispatcher.DispatchAsync (async () =>
+                        await currentPage.Dispatcher.DispatchAsync (() =>
                         {
-                            ((LukeContentPage)naviPage.CurrentPage).Build ();
+                            ((ILukePage)naviPage.CurrentPage).Build ();
                         });
                     }
                     else if (currentPage is ContentPage contentPage)
                     {
-                        ((LukeContentPage)contentPage).Build ();
+                        await currentPage.Dispatcher.DispatchAsync (() =>
+                        {
+                            ((ILukePage)contentPage).Build ();
+                        });
                     }
                 }
             }
