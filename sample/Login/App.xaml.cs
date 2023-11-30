@@ -1,4 +1,4 @@
-﻿using Login.UI.Views;
+﻿using Login.Features.Login.Pages;
 namespace Login;
 
 public partial class App : Application

@@ -57,15 +57,16 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <AndroidResource Remove="UI\Units\**" />
-	  <Compile Remove="UI\Units\**" />
-	  <EmbeddedResource Remove="UI\Units\**" />
-	  <MauiCss Remove="UI\Units\**" />
-	  <MauiXaml Remove="UI\Units\**" />
-	  <None Remove="UI\Units\**" />
+	  <AndroidResource Remove="Features\Login\Pages\Units\**" />
+	  <Compile Remove="Features\Login\Pages\Units\**" />
+	  <EmbeddedResource Remove="Features\Login\Pages\Units\**" />
+	  <MauiCss Remove="Features\Login\Pages\Units\**" />
+	  <MauiXaml Remove="Features\Login\Pages\Units\**" />
+	  <None Remove="Features\Login\Pages\Units\**" />
 	</ItemGroup>
 
 	<ItemGroup>
+	  <None Remove="Resources\Fonts\DoHyeon-Regular.ttf" />
 	  <None Remove="Resources\Fonts\NotoSansKR-Black.ttf" />
 	  <None Remove="Resources\Fonts\NotoSansKR-Bold.ttf" />
 	  <None Remove="Resources\Fonts\NotoSansKR-ExtraBold.ttf" />

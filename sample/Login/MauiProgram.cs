@@ -12,6 +12,7 @@ namespace Login
                 .UseLukeMauiMarkup ()
                 .ConfigureFonts (fonts =>
                 {
+                    fonts.AddFont ("DoHyeon-Regular.ttf", "DoHyeonRegular");
                     fonts.AddFont ("NotoSansKR-Black.ttf", "NotoSansKRBlack");
                     fonts.AddFont ("NotoSansKR-Bold.ttf", "NotoSansKRBold");
                     fonts.AddFont ("NotoSansKR-ExtraBold.ttf", "NotoSansKRExtraBold");
