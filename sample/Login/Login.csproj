@@ -57,6 +57,15 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <AndroidResource Remove="UI\Units\**" />
+	  <Compile Remove="UI\Units\**" />
+	  <EmbeddedResource Remove="UI\Units\**" />
+	  <MauiCss Remove="UI\Units\**" />
+	  <MauiXaml Remove="UI\Units\**" />
+	  <None Remove="UI\Units\**" />
+	</ItemGroup>
+
+	<ItemGroup>
 	  <None Remove="Resources\Fonts\NotoSansKR-Black.ttf" />
 	  <None Remove="Resources\Fonts\NotoSansKR-Bold.ttf" />
 	  <None Remove="Resources\Fonts\NotoSansKR-ExtraBold.ttf" />
@@ -69,14 +78,13 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<PackageReference Include="LukeMauiMarkup" Version="1.0.0.3" />
 		<PackageReference Include="Microsoft.Maui.Controls" Version="$(MauiVersion)" />
 		<PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="$(MauiVersion)" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="8.0.0" />
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Folder Include="UI\Units\" />
+	  <ProjectReference Include="..\..\src\LukeMauiMarkup\LukeMauiMarkup.csproj" />
 	</ItemGroup>
 
 </Project>

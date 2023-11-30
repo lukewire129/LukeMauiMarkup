@@ -32,24 +32,18 @@ public class MainPage : LukeContentPage
                     }
                 }
                 .Row(0),
-
                 new VerticalStackLayout
                 {
                     Spacing = 10,
                     Children =
                     {
-                        new LoginButton
-                        {
-                            BorderWidth =0
-                        }
+                        new LoginButton()
                         .BackgroundColor(this.ColorHex("f9e001"))
-                        .Text("카카오톡으로 시작하기", this.ColorHex("3c1e1e"))
+                        .Text("카카오톡으로 시작하기!", this.ColorHex("3c1e1e"))
                         .Font(size:18, bold: true),
 
-                        new LoginButton
-                        {
-                            BorderWidth = 1.2
-                        }
+                        new LoginButton()
+                        .Border(Width:1.2, Corner:5, this.ColorHex("3c1e1e"))
                         .BackgroundColor(Colors.Transparent)
                         .Text("다른 방법으로 시작하기", this.ColorHex("4c4c4c"))
                         .Font(size:18, bold: true)

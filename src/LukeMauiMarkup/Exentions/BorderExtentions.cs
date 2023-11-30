@@ -2,12 +2,6 @@
 {
     public static class BorderExtentions
     {
-        public static TVisualElement Width<TVisualElement>(this TVisualElement element, double widthRequest) where TVisualElement : VisualElement
-        {
-            element.WidthRequest = widthRequest;
-            return element;
-        }
-
         public static TVisualElement Border<TVisualElement>(
             this TVisualElement element, 
             double? Width = null, 
