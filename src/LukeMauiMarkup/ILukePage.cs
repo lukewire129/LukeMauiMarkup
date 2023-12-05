@@ -1,7 +1,6 @@
-﻿namespace LukeMauiMarkup
+﻿namespace LukeMauiMarkup;
+
+public interface ILukePage
 {
-    public interface ILukePage
-    {
-        void Build();
-    }
+    void Build();
 }
