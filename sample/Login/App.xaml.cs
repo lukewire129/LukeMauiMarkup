@@ -6,7 +6,9 @@ public partial class App : Application
     public App()
     {
         InitializeComponent ();
-
-        MainPage = new NavigationPage (new LoginPage());
+        var navigationPage = new NavigationPage (new LoginPage ());
+        navigationPage.BarBackgroundColor = White;
+        navigationPage.BarTextColor = Black;        
+        MainPage = navigationPage;
     }
 }

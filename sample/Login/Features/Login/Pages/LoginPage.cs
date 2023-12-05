@@ -50,12 +50,8 @@ public class LoginPage : LukeContentPage
                 }
                 .Row(3),
 
-                new Label()
-                {
-                    TextDecorations = TextDecorations.Underline
-                }
-                .Text("로그인하지 않고 둘러보기", this.ColorHex("a3a5af"))
-                .Font(size:15)
+                new HyperLinkLabel()
+                .Text("로그인하지 않고 둘러보기")
                 .CenterHorizontal()
                 .Row(5)
                 .BindTapGesture("LoginCommand")

@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.Logging;
+﻿using Maui.FreakyControls.Extensions;
+using Microsoft.Extensions.Logging;
 
 namespace Login
 {
@@ -27,7 +28,7 @@ namespace Login
 #if DEBUG
     		builder.Logging.AddDebug();
 #endif
-
+            builder.InitializeFreakyControls ();
             return builder.Build ();
         }
     }

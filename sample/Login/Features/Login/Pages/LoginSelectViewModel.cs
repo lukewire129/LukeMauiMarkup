@@ -11,7 +11,7 @@ public partial class LoginSelectViewModel : LukeViewModel
         this.PopModal (false);
         this.Push (new LoginPhoneEmailPage ()
         {
-
+            BindingContext = new LoginPhoneEmailViewModel()
         });
     }
 
