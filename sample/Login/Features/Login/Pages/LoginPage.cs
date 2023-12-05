@@ -1,10 +1,10 @@
 ﻿namespace Login.Features.Login.Pages;
 
-public class MainPage : LukeContentPage
+public class LoginPage : LukeContentPage
 {
-    public MainPage()
+    public LoginPage()
     {
-        this.BindingContext = new MainViewModel ();
+        this.BindingContext = new LoginViewModel ();
     }
 
     public override void Build()
@@ -30,7 +30,7 @@ public class MainPage : LukeContentPage
                     }
                 }
                 .Row(1),
-                new VerticalStackLayout
+                new VStack
                 {
                     Spacing = 10,
                     Children =
@@ -38,7 +38,8 @@ public class MainPage : LukeContentPage
                         new LoginButton()
                         .BackgroundColor(this.ColorHex("f9e001"))
                         .Text("카카오톡으로 시작하기", this.ColorHex("3c1e1e"))
-                        .Font(size:18, bold: true),
+                        .Font(size:18, bold: true)
+                        .Border(Corner:5),
 
                         new LoginButton()
                         .Border(Width:1.2, Corner:5, this.ColorHex("dcdce4"))

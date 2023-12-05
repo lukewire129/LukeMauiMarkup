@@ -1,8 +1,8 @@
 ﻿namespace Login.Features.Login.Pages;
 
-public partial class MainViewModel : LukeViewModel
+public partial class LoginViewModel : LukeViewModel
 {
-    public MainViewModel()
+    public LoginViewModel()
     {
 
     }
