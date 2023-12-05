@@ -25,29 +25,29 @@ public class HotReloadHandler : ICommunityToolkitHotReloadHandler
             {
                 if (type.IsSubclassOf (typeof (Page)))
                 {
-                    if (TryGetModalStackPage (window, out var modalPage))
+                    await currentPage.Dispatcher.DispatchAsync (() =>
                     {
-                        await currentPage.Dispatcher.DispatchAsync (() =>
+                        if (TryGetModalStackPage (window, out var modalPage))
                         {
                             ((ILukePage)modalPage).Build ();
-                        });
-
-                        return;
-                    }
-                    else if (currentPage is NavigationPage naviPage)
-                    {
-                        await currentPage.Dispatcher.DispatchAsync (() =>
+                        }
+                        else if (currentPage is FlyoutPage flyoutPage)
+                        {
+                            ((ILukePage)flyoutPage).Build ();
+                        }
+                        else if (currentPage is TabbedPage tabbedPage)
+                        {
+                            ((ILukePage)tabbedPage.CurrentPage).Build ();
+                        }
+                        else if (currentPage is NavigationPage naviPage)
                         {
                             ((ILukePage)naviPage.CurrentPage).Build ();
-                        });
-                    }
-                    else if (currentPage is ContentPage contentPage)
-                    {
-                        await currentPage.Dispatcher.DispatchAsync (() =>
+                        }
+                        else if (currentPage is ContentPage contentPage)
                         {
                             ((ILukePage)contentPage).Build ();
-                        });
-                    }
+                        }
+                    });
                 }
             }
         }
