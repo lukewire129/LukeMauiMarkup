@@ -88,6 +88,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
+		<PackageReference Include="AathifMahir.Maui.MauiIcons.Cupertino" Version="2.0.0" />
 		<PackageReference Include="Microsoft.Maui.Controls" Version="$(MauiVersion)" />
 		<PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="$(MauiVersion)" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="8.0.0" />
@@ -99,7 +100,7 @@
 
 	<ItemGroup Condition="'$(TargetFramework)' == 'net8.0-android'">
 	  <PackageReference Include="FreakyControls">
-	    <Version>0.4.8</Version>
+	    <Version>0.4.9-pre</Version>
 	  </PackageReference>
 	</ItemGroup>
 

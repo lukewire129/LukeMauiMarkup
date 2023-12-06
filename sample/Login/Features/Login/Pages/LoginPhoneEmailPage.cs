@@ -1,4 +1,5 @@
-﻿using Maui.FreakyControls;
+﻿using Login.Features.Common;
+using Maui.FreakyControls;
 
 namespace Login.Features.Login.Pages;
 
@@ -56,15 +57,5 @@ public class LoginPhoneEmailPage : LukeContentPage
         .BackgroundColor (White)
         .Margins(top:30)
         .Paddings(left: 20, right:20);
-    }
-}
-
-public class HyperLinkLabel : Label
-{
-    public HyperLinkLabel()
-    {
-        this.TextDecorations = TextDecorations.Underline;
-        this.TextColor (this.ColorHex("a3a5af"))
-            .Font (size: 15);
     }
 }

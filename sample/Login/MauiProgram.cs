@@ -1,4 +1,5 @@
 ﻿using Maui.FreakyControls.Extensions;
+using MauiIcons.Cupertino;
 using Microsoft.Extensions.Logging;
 
 namespace Login
@@ -11,6 +12,7 @@ namespace Login
             builder
                 .UseMauiApp<App> ()
                 .UseLukeMauiMarkup ()
+                .UseCupertinoMauiIcons()
                 .ConfigureFonts (fonts =>
                 {
                     fonts.AddFont ("DoHyeon-Regular.ttf", "DoHyeonRegular");
