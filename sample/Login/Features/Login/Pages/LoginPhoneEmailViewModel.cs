@@ -1,13 +1,17 @@
-﻿using Maui.FreakyControls;
+﻿using Login.Features.Signup.Services;
 
 namespace Login.Features.Login.Pages;
 
 public partial class LoginPhoneEmailViewModel : LukeViewModel
 {
+    public LoginPhoneEmailViewModel()
+    {
+    }
+
     [RelayCommand]
     private void SignUp()
     {
-        this.Push (new LoginSignupPage());
+        IPlatformApplication.Current.Services.GetService<SignupService> ().Next ();
     }
 
     [RelayCommand]

@@ -19,7 +19,7 @@ public partial class LukeViewModel : ObservableObject
         Application.Current.MainPage.Navigation.PushModalAsync (page, animated);
     }
 
-    protected void PopM(bool animated = false)
+    protected void Pop(bool animated = false)
     {
         Application.Current.MainPage.Navigation.PopAsync (animated);
     }

@@ -1,4 +1,5 @@
-﻿using Maui.FreakyControls.Extensions;
+﻿using Login.Features.Signup.Services;
+using Maui.FreakyControls.Extensions;
 using MauiIcons.Cupertino;
 using Microsoft.Extensions.Logging;
 
@@ -31,6 +32,8 @@ namespace Login
     		builder.Logging.AddDebug();
 #endif
             builder.InitializeFreakyControls ();
+
+            builder.Services.AddSingleton<SignupService> ();
             return builder.Build ();
         }
     }
