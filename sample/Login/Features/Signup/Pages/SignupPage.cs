@@ -13,7 +13,7 @@ public class SignupPage : LukeContentPage
             {
                 new VStack ()
                 {
-                    Spacing = 20,
+                    Spacing = 40,
                     Children =
                     {
                         new FreakyTextInputLayout()
@@ -23,10 +23,30 @@ public class SignupPage : LukeContentPage
                             BorderStrokeThickness =2,
                             BorderCornerRadius = 5,
                             Title ="휴대전화번호",
+                            Keyboard = Keyboard.Numeric,
+                        }
+                        .BackgroundColor(White)
+                        .Size(Width,50)
+                        .Bind(FreakyTextInputLayout.TextProperty, static (SignupViewModel vm) => vm.PhoneNumber, // getter
+                                                                  static (SignupViewModel vm, string value) => vm.PhoneNumber = value) // setter
+                        .Bind(FreakyTextInputLayout.IsEnabledProperty, static (SignupViewModel vm) => vm.IsRequestPhoneNumber,
+                                                                       static (SignupViewModel vm, bool value) => vm.IsRequestPhoneNumber = value),
+
+                        new FreakyTextInputLayout()
+                        {
+                            BorderType = Maui.FreakyControls.Shared.Enums.BorderType.Full,
+                            BorderStroke = new SolidColorBrush(Black),
+                            BorderStrokeThickness =2,
+                            BorderCornerRadius = 5,
+                            Title ="인증번호",
                             Keyboard = Keyboard.Numeric
                         }
                         .BackgroundColor(White)
-                        .Size(Width,50),
+                        .Size(Width,50)
+                        .Bind(FreakyTextInputLayout.TextProperty, static (SignupViewModel vm) => vm.AuthNumber, // getter
+                                                                  static (SignupViewModel vm, string value) => vm.AuthNumber = value) // setter
+                        .Bind(FreakyTextInputLayout.IsVisibleProperty, static (SignupViewModel vm) => vm.IsRequestAuthNumber,
+                                                                       static (SignupViewModel vm, bool value) => vm.IsRequestAuthNumber = value),
 
                         new Label()
                             .Text("휴대전화 인증이 필요합니다. 휴대전화번호는 외부에 노출하지 않습니다.")
@@ -38,9 +58,14 @@ public class SignupPage : LukeContentPage
 
                 new Button()
                     .Border(Corner:0)
-                    .Text("인증번호받기")
                     .Height(60)
                     .Bottom()
+                    .Font("")
+                    .BindCommand("RequestAuthCommand")
+                    .Bind(Button.TextProperty, static (SignupViewModel vm) => vm.AuthButtonName, // getter
+                                               static (SignupViewModel vm, string value) => vm.AuthButtonName = value) // setter,
+                    .Bind(Button.IsEnabledProperty, static (SignupViewModel vm) => vm.IsRequestButtonEnabled, // getter
+                                                    static (SignupViewModel vm, bool value) => vm.IsRequestButtonEnabled = value) // setter,
             }
         };
     }

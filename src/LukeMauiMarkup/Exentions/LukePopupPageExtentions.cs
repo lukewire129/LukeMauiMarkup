@@ -1,6 +1,4 @@
-﻿using System.Runtime.CompilerServices;
-
-namespace LukeMauiMarkup.Exentions;
+﻿namespace LukeMauiMarkup.Exentions;
 
 public static class LukePopupPageExtentions
 {

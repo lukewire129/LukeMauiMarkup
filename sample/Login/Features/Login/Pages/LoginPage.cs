@@ -66,6 +66,7 @@ public class LoginPage : LukeContentPage
                         .BackgroundColor(Transparent)
                         .Text("다른 방법으로 시작하기", this.ColorHex("4c4c4c"))
                         .Font(size:18, bold: true)
+                        .BindTapGesture("LoginCommand")
                     }
                 }
                 .Row(3),
@@ -74,7 +75,6 @@ public class LoginPage : LukeContentPage
                 .Text("로그인하지 않고 둘러보기")
                 .CenterHorizontal()
                 .Row(5)
-                .BindTapGesture("LoginCommand")
             }
         }
         .BackgroundColor(White);
