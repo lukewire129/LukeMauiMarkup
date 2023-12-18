@@ -28,9 +28,17 @@
 	</PropertyGroup>
 
 	<ItemGroup>
+	  <Compile Remove="Common\Grid.cs" />
+	</ItemGroup>
+
+	<ItemGroup>
 	  <PackageReference Include="CommunityToolkit.Maui.Markup" Version="4.0.0" />
 	  <PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.2" />
 	  <PackageReference Include="Plugin.Maui.Popup" Version="1.0.5" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Folder Include="Common\" />
 	</ItemGroup>
 
 </Project>
