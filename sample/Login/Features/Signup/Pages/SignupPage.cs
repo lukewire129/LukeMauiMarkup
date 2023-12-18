@@ -7,14 +7,11 @@ public class SignupPage : LukeContentPage
     public override void Build()
     {
         Title = "일반회원 가입";
-        Content = new Grid()
-        {
-            Children =
-            {
-                new VStack ()
-                {
-                    Spacing = 40,
-                    Children =
+        Content = new LukeMauiMarkup.Grid([
+             new VStack ()
+             {
+                 Spacing = 40,
+                 Children =
                     {
                         new FreakyTextInputLayout()
                         {
@@ -51,23 +48,22 @@ public class SignupPage : LukeContentPage
                         new Label()
                             .Text("휴대전화 인증이 필요합니다. 휴대전화번호는 외부에 노출하지 않습니다.")
                     }
-                }
-                .Margins(top: 30)
+             }
+                .Margins (top: 30)
                 .Paddings (left: 20, right: 20)
-                .Top(),
+                .Top (),
 
-                new Button()
-                    .Border(Corner:0)
-                    .Height(60)
-                    .Bottom()
-                    .Font("")
-                    .BindCommand("RequestAuthCommand")
-                    .Bind(Button.TextProperty, static (SignupViewModel vm) => vm.AuthButtonName, // getter
+            new Button ()
+                    .Border (Corner: 0)
+                    .Height (60)
+                    .Bottom ()
+                    .Font ("")
+                    .BindCommand ("RequestAuthCommand")
+                    .Bind (Button.TextProperty, static (SignupViewModel vm) => vm.AuthButtonName, // getter
                                                static (SignupViewModel vm, string value) => vm.AuthButtonName = value) // setter,
-                    .Bind(Button.IsEnabledProperty, static (SignupViewModel vm) => vm.IsRequestButtonEnabled, // getter
+                    .Bind (Button.IsEnabledProperty, static (SignupViewModel vm) => vm.IsRequestButtonEnabled, // getter
                                                     static (SignupViewModel vm, bool value) => vm.IsRequestButtonEnabled = value) // setter,
-            }
-        };
+        ]);
     }
 
     protected override bool OnBackButtonPressed()
