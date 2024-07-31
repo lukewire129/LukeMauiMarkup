@@ -2,7 +2,7 @@
 
 ### Overview
 
-CommunityToolkit.Maui.Markup의 추가 기술 구현
+CommunityToolkit.Maui.Markup의 확장버전
  - HotReload 기본으로 적용된 버전
  - 그 외 간소화된 기능 구현
 
