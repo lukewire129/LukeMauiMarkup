@@ -102,7 +102,6 @@ public class LoginSelectPage : LukePopupPage
                                 .Column(0)
                             }
                         }
-
                     }
                 }
                 .Row(2)
