@@ -1,7 +1,7 @@
 // MVVM Toolkit
 // .NET MAUI Markup
 global using LukeMauiMarkup;
-global using LukeMauiMarkup.Exentions;
+global using LukeMauiMarkup.Extentions;
 global using CommunityToolkit.Maui.Markup;
 global using CommunityToolkit.Mvvm.ComponentModel;
 global using CommunityToolkit.Mvvm.Input;

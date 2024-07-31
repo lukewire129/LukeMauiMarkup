@@ -1,6 +1,7 @@
 ﻿using CommunityToolkit.Maui.Markup;
 using LukeMauiMarkup;
 
+
 namespace LukeMauiSample
 {
     public class MainPage : LukeContentPage
@@ -12,7 +13,9 @@ namespace LukeMauiSample
 
         public override void Build()
         {
-            Content = new Grid
+            Content = new Grid(
+                            
+                        )
             {
                 Children =
                 {
@@ -20,7 +23,7 @@ namespace LukeMauiSample
                     .Text("Welcome to .NET MAUI!!!")
                     .TextColor(Colors.Blue)
                     .CenterHorizontal()
-                    .CenterVertical()
+                    .CenterVertical(),
                 }
             }
             .BackgroundColor(Colors.Red);

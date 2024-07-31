@@ -1,4 +1,4 @@
-﻿namespace LukeMauiMarkup.Exentions
+﻿namespace LukeMauiMarkup.Extentions
 {
     public static class BorderExtentions
     {
