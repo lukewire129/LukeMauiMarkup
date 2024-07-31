@@ -1,8 +1,11 @@
 # LukeMauiMarkup
-- 기능
-  1. CommunityToolkit.Maui.Markup의 HotReload 템플릿
 
-- 사용방법
+## Overview
+
+CommunityToolkit.Maui.Markup의 확장
+ - HotReload 기본으로 적용된 버전
+
+## 사용방법
   1. Install
 
      ![image](https://github.com/lukewire129/LukeMauiMarkup/assets/54387261/6c6b18a2-1c38-42d2-924c-abca217c39ca)
