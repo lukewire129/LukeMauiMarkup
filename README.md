@@ -24,7 +24,7 @@ CommunityToolkit.Maui.Markup의 확장
      ![image](https://github.com/lukewire129/LukeMauiMarkup/assets/54387261/773e5950-53a8-4310-8ad4-5f5edde79d3d)
 
 
-### BaseRun
+### 실행영상
 [Screenshot 2023-11-23 at 19.49.03.webm](https://github.com/lukewire129/LukeMauiMarkup/assets/54387261/574bcd93-f0ee-4cf4-9442-c69afb26c9a2)
 
 
