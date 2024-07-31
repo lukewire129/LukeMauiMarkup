@@ -15,7 +15,8 @@ public partial class MainPage : LukeContentPage
             new ScrollView ()
                 .Content (
                     new Grid ()
-                        .Definitions(Columns.Define (Star, 40), Rows.Define (Star, 40))
+                        .ColumnDefinitions (Star, 40)
+                        .RowDefinitions (Star, 40)
                         .Children(
                             new StackLayout ()
                                 .Padding (30)
@@ -24,13 +25,12 @@ public partial class MainPage : LukeContentPage
                                 .Spacing (25)
                                 .Children(
                                     new Button ()
-                                              .Width (100)
-                                              .Height (70)
-                                              .Text ("Navigation")
-                                              .TapGesture (() =>
-                                              {
-                                                  Navigation.PushAsync (new ChildrenPage ());
-                                              })
+                                        .Size(100, 70)
+                                        .Text ("Navigation")
+                                        .TapGesture (() =>
+                                        {
+                                            Navigation.PushAsync (new ChildrenPage ());
+                                        })
                                 ),
 
                             new StackLayout ()
