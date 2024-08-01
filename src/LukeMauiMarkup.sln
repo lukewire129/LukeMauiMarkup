@@ -9,7 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LukeMauiMarkup", "LukeMauiM
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LukeMauiSample", "..\sample\LukeMauiSample\LukeMauiSample.csproj", "{7D44BAC8-0A92-4DA6-B088-C9E6D1E303DF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Login", "..\sample\Login\Login.csproj", "{A235D54A-A0E0-4152-8951-C14F2B3B87DE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Login", "..\sample\Login\Login.csproj", "{A235D54A-A0E0-4152-8951-C14F2B3B87DE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LukeMauiMarkupTemplate", "LukeMauiMarkup.Template\LukeMauiMarkupTemplate\LukeMauiMarkupTemplate.csproj", "{271D86D0-EB18-497E-9975-1750B725B6AC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,12 @@ Global
 		{A235D54A-A0E0-4152-8951-C14F2B3B87DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A235D54A-A0E0-4152-8951-C14F2B3B87DE}.Release|Any CPU.Build.0 = Release|Any CPU
 		{A235D54A-A0E0-4152-8951-C14F2B3B87DE}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{271D86D0-EB18-497E-9975-1750B725B6AC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{271D86D0-EB18-497E-9975-1750B725B6AC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{271D86D0-EB18-497E-9975-1750B725B6AC}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{271D86D0-EB18-497E-9975-1750B725B6AC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{271D86D0-EB18-497E-9975-1750B725B6AC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{271D86D0-EB18-497E-9975-1750B725B6AC}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
