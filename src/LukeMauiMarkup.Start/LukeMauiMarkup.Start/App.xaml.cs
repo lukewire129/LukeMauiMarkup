@@ -1,6 +1,6 @@
-﻿using LukeMauiMarkupTemplate.Pages;
+﻿using LukeMauiMarkup.Start.Pages;
 
-namespace LukeMauiMarkupTemplate
+namespace LukeMauiMarkup.Start
 {
     public partial class App : Application
     {

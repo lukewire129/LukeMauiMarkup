@@ -1,7 +1,7 @@
 ﻿using ObjCRuntime;
 using UIKit;
 
-namespace LukeMauiMarkupTemplate
+namespace LukeMauiMarkup.Start
 {
     public class Program
     {

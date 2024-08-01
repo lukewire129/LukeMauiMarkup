@@ -11,7 +11,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LukeMauiSample", "..\sample
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Login", "..\sample\Login\Login.csproj", "{A235D54A-A0E0-4152-8951-C14F2B3B87DE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LukeMauiMarkupTemplate", "LukeMauiMarkup.Template\LukeMauiMarkupTemplate\LukeMauiMarkupTemplate.csproj", "{271D86D0-EB18-497E-9975-1750B725B6AC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LukeMauiMarkup.Start", "LukeMauiMarkup.Start\LukeMauiMarkup.Start\LukeMauiMarkup.Start.csproj", "{271D86D0-EB18-497E-9975-1750B725B6AC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Template", "Template", "{3FE489D4-FE9C-4A02-92A1-15330D5B188B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -50,6 +52,9 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{271D86D0-EB18-497E-9975-1750B725B6AC} = {3FE489D4-FE9C-4A02-92A1-15330D5B188B}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {2D2062BB-C08F-47A0-86D2-7960695FAEFE}

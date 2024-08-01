@@ -1,7 +1,7 @@
 ﻿using Android.App;
 using Android.Runtime;
 
-namespace LukeMauiMarkupTemplate
+namespace LukeMauiMarkup.Start
 {
     [Application]
     public class MainApplication : MauiApplication

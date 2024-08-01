@@ -1,6 +1,6 @@
 ﻿using Foundation;
 
-namespace LukeMauiMarkupTemplate
+namespace LukeMauiMarkup.Start
 {
     [Register ("AppDelegate")]
     public class AppDelegate : MauiUIApplicationDelegate

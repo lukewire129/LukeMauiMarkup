@@ -1,4 +1,4 @@
-﻿namespace LukeMauiMarkupTemplate.Pages;
+﻿namespace LukeMauiMarkup.Start.Pages;
 
 internal class MainPage : LukeContentPage
 {

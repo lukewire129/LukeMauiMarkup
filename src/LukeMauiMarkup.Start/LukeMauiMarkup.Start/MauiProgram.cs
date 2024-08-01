@@ -1,6 +1,6 @@
 ﻿using Microsoft.Extensions.Logging;
 
-namespace LukeMauiMarkupTemplate
+namespace LukeMauiMarkup.Start
 {
     public static class MauiProgram
     {
