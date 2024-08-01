@@ -24,13 +24,8 @@ public partial class MainPage : LukeContentPage
                                 .BackgroundColor (Colors.Blue)
                                 .Spacing (25)
                                 .Children(
-                                    new Button ()
-                                        .Size(100, 70)
-                                        .Text ("Navigation")
-                                        .TapGesture (() =>
-                                        {
-                                            Navigation.PushAsync (new ChildrenPage ());
-                                        })
+                                    NavigationButton(),
+                                    NavigationButton()
                                 ),
 
                             new StackLayout ()
@@ -42,4 +37,12 @@ public partial class MainPage : LukeContentPage
                 )
         );
     }
+
+    private Button NavigationButton() => new Button ()
+                                            .Size (100, 70)
+                                            .Text ("Navigation")
+                                            .TapGesture (() =>
+                                            {
+                                                Navigation.PushAsync (new ChildrenPage ());
+                                            });
 }
