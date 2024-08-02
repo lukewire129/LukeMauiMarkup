@@ -1,21 +1,17 @@
 ﻿using CommunityToolkit.Maui.Markup;
 using LukeMauiMarkup;
+using LukeMauiMarkup.Attributes;
+using LukeMauiSample.ViewModels;
 
 
 namespace LukeMauiSample
 {
+    [ContextAttribute (typeof(MainPageViewModel))]
     public class MainPage : LukeContentPage
     {
-        public MainPage()
-        {
-           
-        }
-
         public override void Build()
         {
-            Content = new Grid(
-                            
-                        )
+            Content = new Grid()
             {
                 Children =
                 {

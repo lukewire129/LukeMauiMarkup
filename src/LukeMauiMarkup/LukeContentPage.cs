@@ -1,11 +1,10 @@
-﻿namespace LukeMauiMarkup
+﻿namespace LukeMauiMarkup;
+
+public abstract class LukeContentPage : ContentPage, ILukePage
 {
-    public abstract class LukeContentPage : ContentPage, ILukePage
+    public LukeContentPage()
     {
-        public LukeContentPage()
-        {
-            this.Build ();
-        }
-        public abstract void Build();
+        this.Build ();
     }
+    public abstract void Build();
 }

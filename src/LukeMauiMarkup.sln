@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34316.72
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LukeMauiMarkup.Init", "..\sample\LukeMauiMarkup.Init\LukeMauiMarkup.Init.csproj", "{0CB99F65-B679-43B7-8D8E-BB3CB018A798}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LukeMauiMarkup", "LukeMauiMarkup\LukeMauiMarkup.csproj", "{9AF8C64F-94F9-43EB-B8EE-002DA8405B08}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LukeMauiSample", "..\sample\LukeMauiSample\LukeMauiSample.csproj", "{7D44BAC8-0A92-4DA6-B088-C9E6D1E303DF}"
@@ -15,7 +13,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LukeMauiMarkup.Start", "Luk
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Template", "Template", "{3FE489D4-FE9C-4A02-92A1-15330D5B188B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LukeMauiMarkup.Templates", "LukeMauiMarkup.Templates\LukeMauiMarkup.Templates.csproj", "{F8020821-0AD0-4D83-B437-6C3AEE63258A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LukeMauiMarkup.Templates", "LukeMauiMarkup.Templates\LukeMauiMarkup.Templates.csproj", "{F8020821-0AD0-4D83-B437-6C3AEE63258A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,12 +21,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{0CB99F65-B679-43B7-8D8E-BB3CB018A798}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0CB99F65-B679-43B7-8D8E-BB3CB018A798}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0CB99F65-B679-43B7-8D8E-BB3CB018A798}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
-		{0CB99F65-B679-43B7-8D8E-BB3CB018A798}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0CB99F65-B679-43B7-8D8E-BB3CB018A798}.Release|Any CPU.Build.0 = Release|Any CPU
-		{0CB99F65-B679-43B7-8D8E-BB3CB018A798}.Release|Any CPU.Deploy.0 = Release|Any CPU
 		{9AF8C64F-94F9-43EB-B8EE-002DA8405B08}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{9AF8C64F-94F9-43EB-B8EE-002DA8405B08}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9AF8C64F-94F9-43EB-B8EE-002DA8405B08}.Release|Any CPU.ActiveCfg = Release|Any CPU
