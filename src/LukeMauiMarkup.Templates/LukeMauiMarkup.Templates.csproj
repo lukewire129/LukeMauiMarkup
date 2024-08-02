@@ -1,0 +1,25 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <PackageType>Template</PackageType>
+    <PackageVersion>1.0.0</PackageVersion>
+    <PackageId>LukeMauiMarkup.Templates</PackageId>
+    <Title>LukeMauiMarkup Templates</Title>
+    <Description>Templates for creating Avalonia applications and libraries.</Description>
+    <PackageTags>dotnet-new;templates;lukewire;Maui;Markup;MauiCommunityToolkitMarkup</PackageTags>
+    <PackageProjectUrl>https://github.com/lukewire129/LukeMauiMarkup</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/lukewire129/LukeMauiMarkup.git</RepositoryUrl>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <IncludeContentInPack>true</IncludeContentInPack>
+    <IncludeBuildOutput>false</IncludeBuildOutput>
+    <ContentTargetFolders>content</ContentTargetFolders>
+    <NoDefaultExcludes>true</NoDefaultExcludes>
+    <NoPackageAnalysis>true</NoPackageAnalysis>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="templates\**\*" Exclude="templates\**\bin\**;templates\**\obj\**" />
+    <Compile Remove="**\*" />
+  </ItemGroup>
+
+</Project>
