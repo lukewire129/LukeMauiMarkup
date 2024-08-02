@@ -6,6 +6,10 @@ CommunityToolkit.Maui.Markup의 확장버전
  - HotReload 기본으로 적용된 버전
  - 그 외 간소화된 기능 구현
 
+### Template install
+```
+dotnet new install LukeMauiMarkup.Templates::1.0.0
+```
 
 ### 사용방법
   1. Install
@@ -27,7 +31,6 @@ CommunityToolkit.Maui.Markup의 확장버전
 
 ### 실행영상
 [Screenshot 2023-11-23 at 19.49.03.webm](https://github.com/lukewire129/LukeMauiMarkup/assets/54387261/574bcd93-f0ee-4cf4-9442-c69afb26c9a2)
-
 
 ### SLog
 https://forum.dotnetdev.kr/t/lukemauimarkup-library/9039
