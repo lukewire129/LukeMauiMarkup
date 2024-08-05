@@ -6,7 +6,7 @@ public class VStack : VerticalStackLayout
     {
 
     }
-    public VStack(IView[] views)
+    public VStack(params IView[] views)
     {
         this.Children.Clear ();
         foreach(var view in views)

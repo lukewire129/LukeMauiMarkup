@@ -60,7 +60,7 @@ public class LoginPage : LukeContentPage
                                 .BackgroundColor (Transparent)
                                 .Text ("다른 방법으로 시작하기", this.ColorHex ("4c4c4c"))
                                 .Font (size: 18, bold: true)
-                                .BindTapGesture ("LoginCommand")
+                                .BindTapGesture (static(LoginViewModel vm)=> vm.LoginCommand)
                         ),
 
                     new HyperLinkLabel ()
