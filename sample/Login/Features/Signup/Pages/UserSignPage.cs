@@ -1,5 +1,4 @@
-﻿using Maui.FreakyControls;
-using Microsoft.Maui.Controls.Shapes;
+﻿using UraniumUI.Material.Controls;
 
 namespace Login.Features.Signup.Pages;
 
@@ -15,24 +14,16 @@ public class UserSignPage : LukeContentPage
             {
                 new VStack(
                 [
-                    new FreakyTextInputLayout()
+                    new TextField()
                     {
-                        BorderType = Maui.FreakyControls.Shared.Enums.BorderType.Full,
-                        BorderStroke = new SolidColorBrush(Black),
-                        BorderStrokeThickness =2,
-                        BorderCornerRadius = 5,
                         Title ="비밀번호(10자리 이상)",
                         Keyboard = Keyboard.Numeric,
                     }
                     .BackgroundColor(White)
                     .Size(Width,50),
 
-                    new FreakyTextInputLayout()
+                    new TextField()
                     {
-                        BorderType = Maui.FreakyControls.Shared.Enums.BorderType.Full,
-                        BorderStroke = new SolidColorBrush(Black),
-                        BorderStrokeThickness =2,
-                        BorderCornerRadius = 5,
                         Title ="비밀번호 재확인",
                         Keyboard = Keyboard.Numeric,
                     }
@@ -41,23 +32,6 @@ public class UserSignPage : LukeContentPage
 
                     new HStack()
                     {
-                        new Border()
-                        {
-                            Stroke = Black,
-                            StrokeShape = new RoundRectangle()
-                            {
-                                CornerRadius =3,
-                                StrokeThickness = 2,
-                                Stroke = Black,
-                            },
-                            Content = new FreakyEntry()
-                            {
-                                Placeholder= "●●●●",
-                                PlaceholderColor= Black
-                            }
-                        }
-                        .Size(60,50),
-
                         new Label()
                             .FormattedText(
                                     new Span()

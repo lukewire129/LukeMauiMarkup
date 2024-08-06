@@ -21,35 +21,45 @@ public class HotReloadHandler : ICommunityToolkitHotReloadHandler
                 return;
             }
 
-            foreach (var type in types)
+            await currentPage.Dispatcher.DispatchAsync (() =>
             {
-                if (type.IsSubclassOf (typeof (Page)))
+                foreach (var type in types)
                 {
-                    await currentPage.Dispatcher.DispatchAsync (() =>
+                    if (type.IsSubclassOf (typeof (Page)) == false)
+                        return;
+
+                    if (TryGetModalStackPage (window, out var modalPage))
                     {
-                        if (TryGetModalStackPage (window, out var modalPage))
+                        ((ILukePage)modalPage).Build ();
+                    }
+                    else if (currentPage is FlyoutPage flyoutPage)
+                    { 
+                        ((ILukePage)flyoutPage).Build ();
+                    }
+                    else if (currentPage is TabbedPage tabbedPage)
+                    {
+                        string[] names = tabbedPage.CurrentPage.ToString ().Split ('.');
+                        if (type.Name != names[names.Length - 1])
                         {
-                            ((ILukePage)modalPage).Build ();
+                            return;
                         }
-                        else if (currentPage is FlyoutPage flyoutPage)
+                        ((ILukePage)tabbedPage.CurrentPage).Build ();
+                    }
+                    else if (currentPage is NavigationPage naviPage)
+                    {
+                        string[] names = naviPage.CurrentPage.ToString ().Split ('.'); 
+                        if (type.Name != names[names.Length -1])
                         {
-                            ((ILukePage)flyoutPage).Build ();
+                            return;
                         }
-                        else if (currentPage is TabbedPage tabbedPage)
-                        {
-                            ((ILukePage)tabbedPage.CurrentPage).Build ();
-                        }
-                        else if (currentPage is NavigationPage naviPage)
-                        {
-                            ((ILukePage)naviPage.CurrentPage).Build ();
-                        }
-                        else if (currentPage is ContentPage contentPage)
-                        {
-                            ((ILukePage)contentPage).Build ();
-                        }
-                    });
+                        ((ILukePage)naviPage.CurrentPage).Build ();
+                    }
+                    else if (currentPage is ContentPage contentPage)
+                    {
+                        ((ILukePage)contentPage).Build ();
+                    }
                 }
-            }
+            });
         }
     }
     bool TryGetModalStackPage(Window window, [NotNullWhen (true)] out Page? page)

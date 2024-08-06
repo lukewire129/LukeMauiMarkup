@@ -13,6 +13,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Template", "Template", "{3F
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LukeMauiMarkup.Templates", "LukeMauiMarkup.Templates\LukeMauiMarkup.Templates.csproj", "{F8020821-0AD0-4D83-B437-6C3AEE63258A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestHotReload", "TestHotReload\TestHotReload.csproj", "{A862ADAF-E6DD-4137-A950-D635BBB4ED6A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,12 @@ Global
 		{F8020821-0AD0-4D83-B437-6C3AEE63258A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F8020821-0AD0-4D83-B437-6C3AEE63258A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F8020821-0AD0-4D83-B437-6C3AEE63258A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A862ADAF-E6DD-4137-A950-D635BBB4ED6A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A862ADAF-E6DD-4137-A950-D635BBB4ED6A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A862ADAF-E6DD-4137-A950-D635BBB4ED6A}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{A862ADAF-E6DD-4137-A950-D635BBB4ED6A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A862ADAF-E6DD-4137-A950-D635BBB4ED6A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A862ADAF-E6DD-4137-A950-D635BBB4ED6A}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

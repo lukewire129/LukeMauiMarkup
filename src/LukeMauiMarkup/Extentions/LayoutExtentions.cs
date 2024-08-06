@@ -26,4 +26,29 @@ public static class LayoutExtentions
             self.Children.Add (item);
         return self;
     }
+
+    public static T Children<T>(this T self, IList<Microsoft.Maui.ILayout> children)
+                         where T : Layout
+    {
+        foreach (var item in children)
+            self.Children.Add (item);
+        return self;
+    }
+
+    public static T Children<T>(this T self, params Microsoft.Maui.ILayout[] children)
+        where T : Layout
+    {
+        foreach (var item in children)
+            self.Children.Add (item);
+        return self;
+    }
+
+    public static T Children<T>(this T self, Func<Microsoft.Maui.ILayout[]> configure)
+        where T : Layout
+    {
+        var children = configure ();
+        foreach (var item in children)
+            self.Children.Add (item);
+        return self;
+    }
 }

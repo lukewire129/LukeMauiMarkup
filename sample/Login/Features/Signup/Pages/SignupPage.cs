@@ -1,5 +1,5 @@
 ﻿using Login.Features.Signup.Common;
-using Maui.FreakyControls;
+using UraniumUI.Material.Controls;
 
 namespace Login.Features.Signup.Pages;
 public class SignupPage : LukeContentPage
@@ -16,36 +16,28 @@ public class SignupPage : LukeContentPage
                     Spacing = 40,
                     Children =
                     {
-                        new FreakyTextInputLayout()
+                        new TextField()
                         {
-                            BorderType = Maui.FreakyControls.Shared.Enums.BorderType.Full,
-                            BorderStroke = new SolidColorBrush(Black),
-                            BorderStrokeThickness =2,
-                            BorderCornerRadius = 5,
                             Title ="휴대전화번호",
                             Keyboard = Keyboard.Numeric,
                         }
                         .BackgroundColor(White)
                         .Size(Width,50)
-                        .Bind(FreakyTextInputLayout.TextProperty, static (SignupViewModel vm) => vm.PhoneNumber, // getter
+                        .Bind(TextField.TextProperty, static (SignupViewModel vm) => vm.PhoneNumber, // getter
                                                                   static (SignupViewModel vm, string value) => vm.PhoneNumber = value) // setter
-                        .Bind(FreakyTextInputLayout.IsEnabledProperty, static (SignupViewModel vm) => vm.IsRequestPhoneNumber,
+                        .Bind(TextField.IsEnabledProperty, static (SignupViewModel vm) => vm.IsRequestPhoneNumber,
                                                                        static (SignupViewModel vm, bool value) => vm.IsRequestPhoneNumber = value),
 
-                        new FreakyTextInputLayout()
+                        new TextField()
                         {
-                            BorderType = Maui.FreakyControls.Shared.Enums.BorderType.Full,
-                            BorderStroke = new SolidColorBrush(Black),
-                            BorderStrokeThickness =2,
-                            BorderCornerRadius = 5,
                             Title ="인증번호",
                             Keyboard = Keyboard.Numeric
                         }
                         .BackgroundColor(White)
                         .Size(Width,50)
-                        .Bind(FreakyTextInputLayout.TextProperty, static (SignupViewModel vm) => vm.AuthNumber, // getter
+                        .Bind(TextField.TextProperty, static (SignupViewModel vm) => vm.AuthNumber, // getter
                                                                   static (SignupViewModel vm, string value) => vm.AuthNumber = value) // setter
-                        .Bind(FreakyTextInputLayout.IsVisibleProperty, static (SignupViewModel vm) => vm.IsRequestAuthNumber,
+                        .Bind(TextField.IsVisibleProperty, static (SignupViewModel vm) => vm.IsRequestAuthNumber,
                                                                        static (SignupViewModel vm, bool value) => vm.IsRequestAuthNumber = value),
 
                         new Label()

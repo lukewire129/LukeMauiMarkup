@@ -1,7 +1,9 @@
 ﻿using Login.Features.Signup.Services;
-using Maui.FreakyControls.Extensions;
 using MauiIcons.Cupertino;
+#if DEBUG
 using Microsoft.Extensions.Logging;
+#endif
+using UraniumUI;
 
 namespace Login
 {
@@ -13,6 +15,8 @@ namespace Login
             builder
                 .UseMauiApp<App> ()
                 .UseLukeMauiMarkup ()
+                .UseUraniumUI ()
+                .UseUraniumUIMaterial ()
                 .UseCupertinoMauiIcons()
                 .ConfigureFonts (fonts =>
                 {
@@ -31,8 +35,6 @@ namespace Login
 #if DEBUG
     		builder.Logging.AddDebug();
 #endif
-            builder.InitializeFreakyControls ();
-
             builder.Services.AddSingleton<SignupService> ();
             return builder.Build ();
         }
