@@ -20,14 +20,16 @@ public class LoginPage : LukeContentPage
                     new Grid ()
                         .Row (1)
                         .Children (
-                            new TitleLabel ()
+                            new Label ()
                                 .Text ("아파트 실거래가는", Color.FromArgb ("#9da2e8"))
                                 .Font (size: 30, family: "NotoSansKRRegular")
                                 .ZIndex (1)
+                                .Center()
                                 .Margins (top: -100),
 
-                            new TitleLabel ()
+                            new Label ()
                                 .Text ("호갱노노", this.ColorHex ("5d66da"))
+                                .Center ()
                                 .Font (size: 63, family: "NotoSansKRBold")
                         ),
 
@@ -81,13 +83,5 @@ public class LoginPage : LukeContentPage
                 )
             )
             .BackgroundColor (White);
-    }
-}
-public class TitleLabel : Label
-{
-    public TitleLabel()
-    {
-        this.CenterHorizontal()
-            .CenterVertical();
     }
 }
