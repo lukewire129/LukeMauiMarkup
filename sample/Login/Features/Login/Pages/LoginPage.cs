@@ -42,6 +42,7 @@ public class LoginPage : LukeContentPage
                                             .ColumnDefinitions (Star, Auto, Star)
                                             .Children(
                                                  new HorizontalStackLayout ()
+                                                    .Spacing(10)
                                                     .Column (1)
                                                     .Children (
                                                         new Microsoft.Maui.Controls.Shapes.Path ()
@@ -64,11 +65,12 @@ public class LoginPage : LukeContentPage
                             .BorderShape (Corner: 12)
                             .BackgroundColor (Color.FromArgb ("#f9e001")),
 
-                            new LoginButton ()
-                                .Border (Width: 1.2, Corner: 5, this.ColorHex ("dcdce4"))
+                            new Button ()
+                                .Size(337, 68)
+                                .Border (Width: 1.2, Corner: 12, this.ColorHex ("dcdce4"))
                                 .BackgroundColor (Transparent)
                                 .Text ("다른 방법으로 시작하기", Color.FromArgb ("#191919"))
-                                .Font (size: 18, bold: true)
+                                .Font (size: 18, family: "NotoSansKRBold")
                                 .BindCommand (static (LoginViewModel vm) => vm.LoginCommand)
                         ),
 
@@ -87,14 +89,5 @@ public class TitleLabel : Label
     {
         this.CenterHorizontal()
             .CenterVertical();
-    }
-}
-
-public class LoginButton : Button
-{
-    public LoginButton()
-    {
-        FontFamily = "NotoSansKRBold";
-        this.Size(337, 68);
     }
 }
