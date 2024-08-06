@@ -25,4 +25,11 @@ public static class ContentPageExtentions
         self.SetValue (Microsoft.Maui.Controls.ContentPage.TitleProperty, title);
         return self;
     }
+    public static T Background<T>(this T self,
+         Color color)
+        where T : Microsoft.Maui.Controls.ContentPage
+    {
+        self.SetValue(Microsoft.Maui.Controls.ContentPage.BackgroundColorProperty, color);
+        return self;
+    }
 }

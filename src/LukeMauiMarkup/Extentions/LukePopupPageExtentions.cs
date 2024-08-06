@@ -3,8 +3,9 @@
 public static class LukePopupPageExtentions
 {
 
-    public static void ContentBackground(this LukePopupPage lukePopupPage, Color color)
+    public static LukePopupPage ContentBackground(this LukePopupPage lukePopupPage, Color color)
     {
         lukePopupPage.ForegroundColor = color;
+        return lukePopupPage;
     }
 }
