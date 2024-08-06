@@ -1,14 +1,56 @@
-﻿namespace LukeMauiMarkup.Extentions
+﻿using Microsoft.Maui.Controls.Shapes;
+
+namespace LukeMauiMarkup.Extentions
 {
     public static class BorderExtentions
     {
-        public static TVisualElement Border<TVisualElement>(
-            this TVisualElement element, 
-            double? Width = null, 
-            int? Corner = 0, 
-            Color? Color = null) where TVisualElement : View , IBorderElement
+        public static TVisualElement BorderShape<TVisualElement>(
+            this TVisualElement element,
+            double? Width = null,
+            int? Corner = 0,
+            Color? Color = null) where TVisualElement : Border
         {
-            if(element is RadioButton rb)
+            if (element is IBorderView)
+            {
+                if (Width != null)
+                {
+                    element.SetValue (Microsoft.Maui.Controls.Border.StrokeThicknessProperty, Width.Value);
+                }
+                else
+                {
+                    element.SetValue (Microsoft.Maui.Controls.Border.StrokeThicknessProperty, 0);
+                }
+                if (Corner != null)
+                {
+                    RoundRectangle shape = new RoundRectangle ();
+                    shape.CornerRadius = new CornerRadius (Corner.Value);
+                    element.SetValue (Microsoft.Maui.Controls.Border.StrokeShapeProperty, shape);
+                }
+                else
+                {
+                    element.SetValue (Button.CornerRadiusProperty, new Rectangle ());
+                }
+
+                if (Color != null)
+                {
+                    element.SetValue (Microsoft.Maui.Controls.Border.StrokeProperty, Color);
+                }
+                else
+                {
+                    element.SetValue (Microsoft.Maui.Controls.Border.StrokeProperty, Colors.Black);
+                }
+            }
+
+            return element;
+        }
+
+        public static TVisualElement Border<TVisualElement>(
+            this TVisualElement element,
+            double? Width = null,
+            int? Corner = 0,
+            Color? Color = null) where TVisualElement : View, IBorderElement
+        {
+            if (element is RadioButton rb)
             {
                 if (Width != null)
                 {
@@ -63,6 +105,36 @@
                 else
                 {
                     element.SetValue (Button.BorderColorProperty, Colors.Transparent);
+                }
+            }
+            else if (element is IBorderView)
+            {
+                if (Width != null)
+                {
+                    element.SetValue (Microsoft.Maui.Controls.Border.StrokeThicknessProperty, Width.Value);
+                }
+                else
+                {
+                    element.SetValue (Microsoft.Maui.Controls.Border.StrokeThicknessProperty, 0);
+                }
+                if (Corner != null)
+                {
+                    RoundRectangle shape = new RoundRectangle ();
+                    shape.CornerRadius = new CornerRadius (Corner.Value);
+                    element.SetValue (Microsoft.Maui.Controls.Border.StrokeShapeProperty, shape);
+                }
+                else
+                {
+                    element.SetValue (Button.CornerRadiusProperty, new Rectangle());
+                }
+
+                if (Color != null)
+                {
+                    element.SetValue (Microsoft.Maui.Controls.Border.StrokeProperty, Color);
+                }
+                else
+                {
+                    element.SetValue (Microsoft.Maui.Controls.Border.StrokeProperty, Colors.Black);
                 }
             }
             
